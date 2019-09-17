@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Choose an LED</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <style>
+      .btn {
+        border: 2px solid;
+        color: white;
+        padding: 14px 28px;
+        cursor: pointer;
+        font-size: 16px;
+        text-align: center;
+        background-color: white;
+        border-radius: 8px;
+      }
+      .red{
+        border-color: #ff1a1a;
+        color: #ff1a1a;
+      }
+      .red:hover {
+        background: #ff1a1a;
+        color: white;
+      }
+
+      .blue{
+        border-color: #2196F3;
+        color: dodgerblue;
+      }
+      .blue:hover {
+        background: #2196F3;
+        color: white;
+      }
+
+      .black{
+        border-color: #0d0d0d;
+        color: #0d0d0d;
+      }
+      .black:hover {
+        background: #0d0d0d;
+        color: white;
+      }
+
+      .purple{
+        border-color: #cc00cc;
+        color: #cc00cc;
+      }
+      .purple:hover {
+        background: #cc00cc;
+        color: white;
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    {% block body %}
+
+    <form action="/Red/" method="post">
+        <button class="btn red">RED LED</button>
+    </form>
+
+    <form action="/Blue/" method="post">
+        <button class="btn blue">BLUE LED</button>
+    </form>
+
+    <form action="/Both/" method="post">
+      <button class="btn purple">BOTH LED</button>
+    </form>
+
+    <form action="/Neither/" method="post">
+      <button class="btn black">NO LED</button>
+    </form>
+
+    {% endblock %}
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  </body>
+
+</html>
